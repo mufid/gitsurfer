@@ -1,4 +1,7 @@
+require_dependency 'git_lib'
+
 class Repo < ActiveRecord::Base
+
   def commits
     git_check
     @repo.commits
@@ -18,4 +21,14 @@ class Repo < ActiveRecord::Base
     #   - or broken git repository
     @repo = GitLib::Repo.new(path)
   end
+  
 end
+
+#
+# Latest Schema
+# --------------------
+# id           int
+# title        string
+# path         string
+#
+# EOF - do not delete this

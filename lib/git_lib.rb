@@ -4,7 +4,7 @@ module GitLib
 
     end
     def commits(query_object)
-      
+
     end
   end
 
